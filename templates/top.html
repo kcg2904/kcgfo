@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  {% block title %}{% endblock %} <title>김창규의 포트폴리오</title> 
+  {% endblock %}
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="/">메인화면</a>
+
+  <ul class="navbar-nav">
+<!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+       	Web
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/webapp">웹앱</a>
+        <a class="dropdown-item" href="/web">웹 프로젝트</a>
+      </div>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Unity2D
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/keep">학점을 지켜라</a>
+        <a class="dropdown-item" href="/cp">코로나 피하기</a>
+      </div>
+    </li>
+    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Unity3D
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/pw">턴제 게임</a>
+      </div>
+    </li>
+        <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        기타
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/data">공공 데이터 빅데이터 분석</a>
+     <!--   <a class="dropdown-item" href="/linx">리눅스</a>-->
+      </div>
+    </li>
+  </ul>
+</nav>
+<div class="container-fluid"> 
+  <div id="content">{% block content %}{% endblock %}</div> 
+</div> 
+
